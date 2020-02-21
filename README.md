@@ -2,14 +2,18 @@
 
 [Orca](https://100r.co/pages/orca.html) is a visual programming language, designed to create procedural sequencers on the fly.
 
+Currently [mutlitple engines are not supported](https://llllllll.co/t/orca/22492/154). This version of Orca, replaces the [Timber engine](https://llllllll.co/t/timber/) with the [PolyPerc synth engine](https://llllllll.co/t/awake/) (from Awake).
+
+
 ### Requirements
 
-[Timber engine](https://llllllll.co/t/timber/)
+[PolyPerc engine](https://llllllll.co/t/awake/)
 
 
 ### Documentation
 
 Please refer to original [docs](https://github.com/hundredrabbits/Orca#operators)
+
 
 ## Operators
 
@@ -54,11 +58,11 @@ Only 1 Engine supported at a time, so Timber is deactivated in favor of PolyPerc
 - `>` **g.write**(*x* *y* value): Sets grid led on bang.
 - `<` **g.read**(*x* *y*): Reads specific coordinates. If value > 6 outputs bang.
 - `:` **midi**(*channel* octave note velocity length): Sends a MIDI note.
-- `|` **polyperc**(*octave* *note* release cutoff amp pw gain): Plays a PolyPerc note.
+- `|` **synth**(*octave* *note* release cutoff amp pw gain): Plays a note with the synth engine.
 - `%` **mono**(*channel* octave note velocity length): Sends monophonic MIDI note.
 - `&` **midi in**(*channel*): Outputs midi note
 - `^` **cc in**(*cc*): Outputs midi cc value
 - `!` **cc**(*channel* knob value): Sends MIDI control change.
 - `=` **OSC** (*path*;x;y..): Locks each consecutive eastwardly ports. `;` is delimeter for values
-- `$` **r.note**(mode scale): Outputs random note within scale.
+- `$` **r.note**(note scale-mode): Outputs random note within scale.
 - `?` **levels**(*param* value): Sets selected volume level on bang

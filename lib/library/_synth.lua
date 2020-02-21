@@ -1,8 +1,8 @@
-local polyperc = function ( self, x, y )
+local synth = function ( self, x, y )
 
   self.y = y
   self.x = x
-  self.name = 'polyperc'
+  self.name = 'synth'
   self.ports = { {1, 0, 'in-octave' }, {2, 0, 'in-note' }, {3, 0, 'in-release' }, {4, 0, 'in-cutoff' }, {5, 0, 'in-amp' }, {6, 0, 'in-pw' }, {7, 0, 'in-gain' } }
   self:spawn(self.ports)
 
@@ -31,4 +31,4 @@ end
 
 
 
-return polyperc
+return synth

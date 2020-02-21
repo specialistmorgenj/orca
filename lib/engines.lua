@@ -56,8 +56,6 @@ end
 
 
 function orca_engine.init()
-  -- polyperc
-
   -- timber
   --[[
   params:add_trigger('load_f','+ Load Folder')
