@@ -14,7 +14,7 @@
 -- sequencers on the fly.
 --
 -- v1.0 @its_your_bedtime
--- v1.2 @frederickk (PolyPerc + Import)
+-- v1.3 @frederickk (Synth + Import)
 --
 -- llllllll.co/t/orca
 --
@@ -171,6 +171,8 @@ function orca.import(pth)
       tab.save( l, norns.state.data .. name .."_import.orca" )
       print ("imported '" .. norns.state.data .. name .. ".txt' as '" .. norns.state.data .. name .."_import.orca'" )
     end
+  else
+    print("invalid data")
   end
 
   if util.file_exists( norns.state.data .. name .."_import.orca" ) then
@@ -212,6 +214,8 @@ function orca.export(txt)
     end
     io.close( txt_file )
     print( "exported TXT " .. full_path .. '.txt' )
+  else
+    print("export cancel")
   end
 end
 
