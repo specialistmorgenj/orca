@@ -8,7 +8,7 @@ local softcut_param = function ( self, x, y )
   self.name = 'sc.param'
 
   local playhead = util.clamp( self:listen(self.x + 1, self.y) or 1, 1, self.sc_ops.max )
-  local param = util.clamp( self:listen( self.x + 2, self.y ) or 1, 1, #param_ids)
+  local param = util.clamp( self:listen( self.x + 2, self.y ) or 1, 1, #param_ids )
   local val = self:listen( self.x + 3, self.y ) or 0
   val = ( param == 1 and (val % 4) ) or val
   local value = val or 0
